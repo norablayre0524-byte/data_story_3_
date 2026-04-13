@@ -1,0 +1,81 @@
+--- 
+title: "Bookdown Project"
+author: "Nora Stanley"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: 
+  bookdown::gitbook:
+    config:
+      sharing:
+        facebook: false
+        twitter: false
+documentclass: book
+bibliography: [bibliography.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: https://github.com/ericmkeen/bookdown_minimal
+description: "This is my bookdown project for data story #3, a foundation for my final data story project"
+---
+
+# Prerequisites
+
+This is my bookdown project for data story #3, a foundation for my final data story project.
+
+This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports, e.g., a math equation $a^2 + b^2 = c^2$, or for weaving in `R` with `Rmarkdown`.
+
+The **bookdown** package can be installed from CRAN or Github:
+
+```{r eval=FALSE}
+library(bookdown)
+# or the development version
+# devtools::install_github("rstudio/bookdown")
+```
+
+Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
+
+To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.org/tinytex/>.
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
+
+<!--chapter:end:index.Rmd-->
+
+# Introduction {#intro}
+
+You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
+
+The age of technology has broadened the horizons of human capabilities in so many exciting ways. These advancements have allowed for exponential improvements in medicine, science, and access to information. Additionally, technology serves as an excellent outlet for creativity and social connection. Rapid innovation in technology is still ongoing and will continue to change our reality.
+
+While the revolution of technology holds so much promise, the dangers of technology must be addressed so that technology is part of creating a better future rather than destroying it. A key risk of technology rests in the internet. The internet itself can be a useful tool, but normalized internet behavior is becoming a threat to human health and the environment. People aged between 16-64 spent an average of 6 hours and forty minutes on the internet in the third quarter of 2023 and numbers are similar across recent years1. So, it's clear that the internet is an integral part of life no matter the age. This means spreading awareness for the harms of the internet is more crucial than ever.
+
+This issue is certainly prominent as it relates to the UN’s Sustainable Development Goals(SDGs) which were designed to ensure a safe, healthier, and more sustainable future worldwide. One of the SDGs is Good Health and Well-Being which outlines sub-targets to improve global physical and mental health which can be affected by bad internet habits. Further, reducing the environmental impacts of the internet could play a key part in SDG #12 Responsible Consumption and Production and SDG #13 Climate Action. International cooperation through the SDGs is imperative for working towards a society that is beneficial for everyone which can be sparked through individual changes.
+
+
+<!--chapter:end:01-intro.Rmd-->
+
+# Another chapter
+
+This chapter has multiple subsections.
+
+## Example one
+
+## Example two
+
+<!--chapter:end:02-another_chapter.Rmd-->
+
+# Final Words
+
+We have finished a nice book.
+
+<!--chapter:end:03-summary.Rmd-->
+
+`r if (knitr:::is_html_output()) '
+# References {-}
+'`
+
+<!--chapter:end:99-references.Rmd-->
+
